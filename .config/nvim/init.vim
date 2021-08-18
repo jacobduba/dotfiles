@@ -1,7 +1,8 @@
 call plug#begin()
 
 Plug 'altercation/vim-colors-solarized'
-Plug 'neovim/nvim-lspconfig'
+Plug 'junegunn/fzf', 
+Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-sensible'
 
 call plug#end()
@@ -28,3 +29,5 @@ set lazyredraw
 
 syntax enable
 colorscheme solarized
+
+nnoremap <silent> <C-p> :Files<CR>
