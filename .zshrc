@@ -76,17 +76,17 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-# export MANPATH="/usr/local/man:$MANPATH"
+export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='nvim'
-# else
-#   export EDITOR='vi'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='nvim'
+else
+  export EDITOR='vi'
+fi
 
 # Compilation flags
 export ARCHFLAGS="-arch x86_64"
@@ -95,8 +95,6 @@ export ARCHFLAGS="-arch x86_64"
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
-# Example aliases
 alias r="ranger"
 alias zshrc="nvim ~/.zshrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
@@ -105,6 +103,10 @@ alias swayconf="nvim ~/.config/sway/config"
 
 # Enviromental variables
 export BEMENU_OPTS="-l 10 --ignorecase -n --fn 'Fira Code 11' --tf '#FFFFFF' --hf '#FFFFFF'"
+export FZF_DEFAULT_COMMAND="fd --hidden ."
+export FZF_ALT_C_COMMAND="fd --hidden --type d ."
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --no-color"
 export MOZ_ENABLE_WAYLAND=1
 
 # If running from tty1 start sway
