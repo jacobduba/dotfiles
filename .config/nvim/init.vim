@@ -23,6 +23,7 @@ set nowrap
 set mouse=a
 
 set noswapfile
+set hidden
 
 set nofoldenable
 set lazyredraw
@@ -30,4 +31,5 @@ set lazyredraw
 syntax enable
 colorscheme solarized
 
-nnoremap <silent> <C-p> :Files<CR>
+nnoremap <silent> <C-p> :GFiles<CR>
+nnoremap <silent> <C-f> :Lines<CR>

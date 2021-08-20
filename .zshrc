@@ -102,6 +102,8 @@ alias vimrc="nvim ~/.config/nvim/init.vim"
 alias swayconf="nvim ~/.config/sway/config"
 
 # Enviromental variables
+export VISUAL=nvim;
+export EDITOR=nvim;
 export BEMENU_OPTS="-l 10 --ignorecase -n --fn 'Fira Code 11' --tf '#FFFFFF' --hf '#FFFFFF'"
 export FZF_DEFAULT_COMMAND="fd --hidden ."
 export FZF_ALT_C_COMMAND="fd --hidden --type d ."
