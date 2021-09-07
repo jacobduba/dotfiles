@@ -178,6 +178,8 @@ bar {
     tray_output none
 }
 
+exec --no-startup-id blueman-applet
+
 # change font 
     font pango:FiraCode Regular 11
 # notifications
