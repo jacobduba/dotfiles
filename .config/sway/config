@@ -41,6 +41,11 @@ input type:touchpad {
     natural_scroll enabled
 }
 
+output "Sharp Corporation 0x14F9 0x00000000" {
+    # LMAO THE FRACTIONAL SCALING SUCKS
+    # scale 1.25
+}
+
 ### Key bindings
 # Basics:
     # Start a terminal
@@ -194,6 +199,9 @@ exec --no-startup-id blueman-applet
     bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
     bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
     bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+#brightness controls
+    bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set 10%+
+    bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 10%-
 # music controls
     bindsym XF86AudioPlay exec playerctl play-pause
     bindsym XF86AudioNext exec playerctl next

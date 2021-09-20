@@ -110,6 +110,7 @@ export FZF_ALT_C_COMMAND="fd --hidden --type d ."
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --no-color"
 export MOZ_ENABLE_WAYLAND=1
+export _JAVA_AWT_WM_NONREPARENTING=1 sway
 
 # If running from tty1 start sway
 if [ "$(tty)" = "/dev/tty1" ]; then

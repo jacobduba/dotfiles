@@ -1,3 +1,5 @@
 [user]
 	name = jacob duba
 	email = jacob@mooshoe.me
+[status]
+	showUntrackedFiles = no
