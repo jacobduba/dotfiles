@@ -188,7 +188,8 @@ bar {
     tray_output none
 }
 
-exec --no-startup-id blueman-applet
+exec --no-startup-id blueman-manager
+exec insync start
 
 # change font 
     font pango:FiraCode Regular 11
@@ -207,7 +208,7 @@ exec --no-startup-id blueman-applet
     bindsym XF86AudioNext exec playerctl next
     bindsym XF86AudioPrev exec playerctl previous
 # take screenshot region select copy
-    bindsym Shift+Print exec grim -t png -g "$(slurp -d)" - | wl-copy -t image/png && swaymsg 'mode "default"'
+    bindsym Shift+Print exec grim -t png -g "$(slurp -d)" - | wl-copy -t image/png 
 # take screenshot save
     bindsym $mod+Print exec grim -t jpeg ~/screenshots/$(date +%Y-%m-%d_%H-%m-%s).jpg
 # take screenshot region select save

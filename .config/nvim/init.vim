@@ -4,6 +4,7 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'junegunn/fzf', 
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-sensible'
+Plug 'plasticboy/vim-markdown'
 
 call plug#end()
 
