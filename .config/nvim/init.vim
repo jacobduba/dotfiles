@@ -4,6 +4,7 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'junegunn/fzf', 
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-sensible'
+Plug 'rust-lang/rust.vim'
 
 call plug#end()
 
@@ -29,6 +30,7 @@ set nofoldenable
 set lazyredraw
 
 syntax enable
+filetype plugin indent on
 colorscheme solarized
 
 nnoremap <silent> <C-p> :GFiles<CR>
