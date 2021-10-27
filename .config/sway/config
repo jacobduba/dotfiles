@@ -210,8 +210,8 @@ exec insync start
 # take screenshot region select copy
     bindsym Shift+Print exec grim -t png -g "$(slurp -d)" - | wl-copy -t image/png 
 # take screenshot save
-    bindsym $mod+Print exec grim -t jpeg ~/screenshots/$(date +%Y-%m-%d_%H-%m-%s).jpg
+    bindsym $mod+Print exec grim -t jpeg ~/img/$(date +%Y-%m-%d_%H-%m-%s).jpg
 # take screenshot region select save
-    bindsym $mod+Shift+Print exec grim -t jpeg -g "$(slurp)" ~/screenshots/$(date +%Y-%m-%d_%H-%m-%s).jpg
+    bindsym $mod+Shift+Print exec grim -t jpeg -g "$(slurp)" ~/img/$(date +%Y-%m-%d_%H-%m-%s).jpg
 
 include /etc/sway/config.d/*
