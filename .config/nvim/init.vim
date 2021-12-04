@@ -6,11 +6,8 @@ Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'rust-lang/rust.vim'
-<<<<<<< Updated upstream
-=======
 Plug 'tpope/vim-sensible'
 Plug 'vim-scripts/cSyntaxAfter'
->>>>>>> Stashed changes
 
 call plug#end()
 
@@ -35,11 +32,8 @@ set hidden
 set nofoldenable
 set lazyredraw
 
-<<<<<<< Updated upstream
-=======
 set clipboard+=unnamedplus
 
->>>>>>> Stashed changes
 syntax enable
 filetype plugin indent on
 colorscheme nord
