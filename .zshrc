@@ -96,6 +96,7 @@ export ARCHFLAGS="-arch x86_64"
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 alias r="ranger"
+alias lg="lazygit"
 alias zshrc="nvim ~/.zshrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
 alias vimrc="nvim ~/.config/nvim/init.vim"
@@ -110,7 +111,8 @@ export FZF_ALT_C_COMMAND="fd --hidden --type d ."
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --no-color"
 export MOZ_ENABLE_WAYLAND=1
-export _JAVA_AWT_WM_NONREPARENTING=1 sway
+export _JAVA_AWT_WM_NONREPARENTING=1
+export QT_QPA_PLATFORMTHEME=qt5ct
 
 # If running from tty1 start sway
 if [ "$(tty)" = "/dev/tty1" ]; then
