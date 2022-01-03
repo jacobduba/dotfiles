@@ -22,13 +22,16 @@
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+# output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 #
 # Example configuration:
 #
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
+output "Sharp Corporation 0x14F9 0x00000000" {
+    scale 1.20
+}
 
 # Input configuration
 input type:pointer {
@@ -39,11 +42,6 @@ input type:pointer {
 input type:touchpad {
     tap enabled
     natural_scroll enabled
-}
-
-output "Sharp Corporation 0x14F9 0x00000000" {
-    # LMAO THE FRACTIONAL SCALING SUCKS
-    # scale 1.25
 }
 
 ### Key bindings
@@ -188,30 +186,34 @@ bar {
     tray_output none
 }
 
-exec --no-startup-id blueman-manager
-exec insync start
-
-# change font 
+# Other
+	# change font 
     font pango:FiraCode Regular 11
-# notifications
+	# notifications
     bindsym $mod+n exec makoctl dismiss
     bindsym $mod+Shift+n exec makoctl dismiss -a
-# volume controls
+	# volume controls
     bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
     bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
     bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
-#brightness controls
+	# brightness controls
     bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set 10%+
     bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 10%-
-# music controls
+	# music controls
     bindsym XF86AudioPlay exec playerctl play-pause
     bindsym XF86AudioNext exec playerctl next
     bindsym XF86AudioPrev exec playerctl previous
-# take screenshot region select copy
+	# take screenshot region select copy
     bindsym Shift+Print exec grim -t png -g "$(slurp -d)" - | wl-copy -t image/png 
-# take screenshot save
-    bindsym $mod+Print exec grim -t jpeg ~/img/$(date +%Y-%m-%d_%H-%m-%s).jpg
-# take screenshot region select save
-    bindsym $mod+Shift+Print exec grim -t jpeg -g "$(slurp)" ~/img/$(date +%Y-%m-%d_%H-%m-%s).jpg
+	# take screenshot save
+    bindsym $mod+Print exec grim -t jpeg ~/img/screenshots/$(date +%Y-%m-%d_%H-%m-%s).jpg
+	# take screenshot region select save
+    bindsym $mod+Shift+Print exec grim -t jpeg -g "$(slurp)" ~/img/screenshots/$(date +%Y-%m-%d_%H-%m-%s).jpg
+	# bluetooth
+	bindsym $mod+Shift+b exec --no-startup-id blueman-manager
+
+# Autostartns
+	# Insync
+	exec insync start
 
 include /etc/sway/config.d/*
