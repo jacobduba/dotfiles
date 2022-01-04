@@ -1,0 +1,26 @@
+#!/usr/bin/env zsh
+
+config="$(echo "Copy screen\nCopy region\nSave screen\nSave region" | bemenu)"
+
+case $config in
+	"Copy screen")
+		grim -t png - | wl-copy
+		;;
+	"Copy region")
+		grim -t png -g "$(slurp)" - | wl-copy
+		;;
+	"Save screen")
+		grim -t jpeg ~/img/screenshots/$(date +%Y-%m-%d_%H-%m-%s).jpg
+		;;
+	"Save region")
+		grim -t jpeg -g "$(slurp)" ~/img/screenshots/$(date +%Y-%m-%d_%H-%m-%s).jpg
+		;;
+esac
+
+	# take screenshot region select copy
+    # bindsym Shift+Print exec grim -t png -g "$(slurp -d)" - | wl-copy -t image/png 
+	# take screenshot save
+    # bindsym $mod+Print exec grim -t jpeg ~/img/screenshots/$(date +%Y-%m-%d_%H-%m-%s).jpg
+	# take screenshot region select save
+    # bindsym $mod+Shift+Print exec grim -t jpeg -g "$(slurp)" ~/img/screenshots/$(date +%Y-%m-%d_%H-%m-%s).jpg
+

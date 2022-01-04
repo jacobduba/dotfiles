@@ -7,9 +7,9 @@ Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/vim-vsnip'
-Plug 'junegunn/fzf'
-Plug 'junegunn/fzf.vim'
 Plug 'neovim/nvim-lspconfig'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'rust-lang/rust.vim'
 Plug 'shaunsingh/nord.nvim'
@@ -42,10 +42,15 @@ set clipboard+=unnamedplus
 
 syntax enable
 filetype plugin indent on
+let g:nord_contrast = v:true
+let g:nord_borders = v:true
 colorscheme nord
 
-nnoremap <silent> <C-p> :GFiles<CR>
-nnoremap <silent> <C-f> :Lines<CR>
+nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
+nnoremap <C-p> <cmd>lua require('telescope.builtin').git_files({ show_untracked = false })<cr>
+nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
+nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
+nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 
 lua<<EOF
 require'nvim-treesitter.configs'.setup {

@@ -203,14 +203,10 @@ bar {
     bindsym XF86AudioPlay exec playerctl play-pause
     bindsym XF86AudioNext exec playerctl next
     bindsym XF86AudioPrev exec playerctl previous
-	# take screenshot region select copy
-    bindsym Shift+Print exec grim -t png -g "$(slurp -d)" - | wl-copy -t image/png 
-	# take screenshot save
-    bindsym $mod+Print exec grim -t jpeg ~/img/screenshots/$(date +%Y-%m-%d_%H-%m-%s).jpg
-	# take screenshot region select save
-    bindsym $mod+Shift+Print exec grim -t jpeg -g "$(slurp)" ~/img/screenshots/$(date +%Y-%m-%d_%H-%m-%s).jpg
 	# bluetooth
 	bindsym $mod+Shift+b exec --no-startup-id blueman-manager
+	# screenshots
+	bindsym Print exec screenshot
 
 # Autostartns
 	# Insync
