@@ -16,11 +16,3 @@ case $config in
 		grim -t jpeg -g "$(slurp)" ~/img/screenshots/$(date +%Y-%m-%d_%H-%m-%s).jpg
 		;;
 esac
-
-	# take screenshot region select copy
-    # bindsym Shift+Print exec grim -t png -g "$(slurp -d)" - | wl-copy -t image/png 
-	# take screenshot save
-    # bindsym $mod+Print exec grim -t jpeg ~/img/screenshots/$(date +%Y-%m-%d_%H-%m-%s).jpg
-	# take screenshot region select save
-    # bindsym $mod+Shift+Print exec grim -t jpeg -g "$(slurp)" ~/img/screenshots/$(date +%Y-%m-%d_%H-%m-%s).jpg
-
