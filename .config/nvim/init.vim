@@ -7,6 +7,8 @@ Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/vim-vsnip'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+Plug 'jiangmiao/auto-pairs'
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
@@ -22,7 +24,7 @@ set tabstop=4
 set shiftwidth=4
 set autoindent
 
-set number
+set number relativenumber
 set scrolloff=3
 set sidescroll=3
 
@@ -50,9 +52,10 @@ nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
 nnoremap <C-p> <cmd>lua require('telescope.builtin').git_files({ show_untracked = false })<cr>
 nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
-nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 
 lua<<EOF
+local map = vim.api.nvim_set_keymap
+
 require'nvim-treesitter.configs'.setup {
 	ensure_installed = "all",
 	highlight = {
@@ -97,6 +100,7 @@ local servers = {
 	'html', 
 	'jsonls',
 	'tsserver',
+	'sumneko_lua',
 }
 
 for _, lsp in ipairs(servers) do
@@ -141,7 +145,7 @@ cmp.setup {
       		else
         		fallback()
       		end
-    	end,
+		end,
   	},
   	sources = {
     	{ name = 'nvim_lsp' },

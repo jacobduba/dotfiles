@@ -70,7 +70,7 @@ HIST_STAMPS="mm/dd/yyyy"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=( git fzf nvm )
+plugins=( git fzf nvm zsh-autosuggestions )
 
 source $ZSH/oh-my-zsh.sh
 
@@ -113,6 +113,12 @@ export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --no-color"
 export MOZ_ENABLE_WAYLAND=1
 export _JAVA_AWT_WM_NONREPARENTING=1
 export QT_QPA_PLATFORMTHEME=qt5ct
+export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+
+# https://superuser.com/a/459057
+__git_files () { 
+    _wanted files expl 'local files' _files     
+}
 
 # If running from tty1 start sway
 if [ "$(tty)" = "/dev/tty1" ]; then

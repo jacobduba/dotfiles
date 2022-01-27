@@ -1,6 +1,6 @@
-#!/usr/bin/env zsh
+#!/bin/sh
 
-config="$(echo "Copy screen\nCopy region\nSave screen\nSave region" | bemenu)"
+config="$(printf "Copy screen\nCopy region\nSave screen\nSave region" | bemenu)"
 
 case $config in
 	"Copy screen")
