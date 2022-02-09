@@ -1,0 +1,7 @@
+#!/bin/sh
+
+if grep -q open /proc/acpi/button/lid/LID0/state; then
+    swaymsg 'output "Sharp Corporation 0x14F9 0x00000000" enable'
+else
+    swaymsg 'output "Sharp Corporation 0x14F9 0x00000000" disable'
+fi
