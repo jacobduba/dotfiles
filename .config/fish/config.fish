@@ -1,6 +1,6 @@
 set fish_greeting
 
-set -gx PATH $HOME/bin $PATH
+set -gx PATH $HOME/bin $PATH $HOME/go/bin
 
 set -gx EDITOR nvim
 set -gx BROWSER firefox
@@ -11,14 +11,14 @@ set -gx MOZ_ENABLE_WAYLAND 1
 set -gx _JAVA_AWT_WM_NONREPARENTING 1
 set -gx QT_QPA_PLATFORMTHEME qt5ct
 
-alias r "ranger"
-alias lg "lazygit"
+alias r="ranger"
+alias ll="ls -lh"
 
 alias fishconf "$EDITOR ~/.config/fish/config.fish"
 alias vimrc "$EDITOR ~/.config/nvim/init.vim"
 alias swayconf "$EDITOR ~/.config/sway/config"
-alias todo "$EDITOR ~/onedrive/todo.md"
-alias workouts "$EDITOR ~/onedrive/workouts.md"
+alias todo "$EDITOR ~/OneDrive/todo.md"
+alias workouts "$EDITOR ~/OneDrive/workouts.md"
 
 if status is-interactive
 

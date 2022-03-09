@@ -3,3 +3,5 @@
 	email = jacob@mooshoe.me
 [status]
 	showUntrackedFiles = no
+[core]
+	autocrlf = input

@@ -8,7 +8,7 @@ Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/vim-vsnip'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
-Plug 'jiangmiao/auto-pairs'
+Plug 'windwp/nvim-autopairs'
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
@@ -101,6 +101,7 @@ local servers = {
 	'jsonls',
 	'tsserver',
 	'sumneko_lua',
+	'gopls'
 }
 
 for _, lsp in ipairs(servers) do
@@ -168,4 +169,16 @@ cmp.setup.cmdline(':', {
       	{ name = 'cmdline' }
     })
 })
+
+local npairs = require("nvim-autopairs")
+
+npairs.setup{
+	disable_filetype = { "TelecopePrompt", "Markdown" },
+	check_ts = true
+}
+
+local ts_conds = require("nvim-autopairs.ts-conds")
+
+local cmp_autopairs = require("nvim-autopairs.completion.cmp")
+cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done({ map_char = { tex = "" } }))
 EOF
