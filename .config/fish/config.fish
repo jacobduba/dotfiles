@@ -20,6 +20,8 @@ alias swayconf "$EDITOR ~/.config/sway/config"
 alias todo "$EDITOR ~/OneDrive/todo.md"
 alias workouts "$EDITOR ~/OneDrive/workouts.md"
 
+zoxide init fish | source
+
 if status is-interactive
 
 end

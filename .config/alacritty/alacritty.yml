@@ -8,7 +8,6 @@ window:
   padding:
     x: 0
     y: 0
-  dynamic_padding: false
   decorations: full
   startup_mode: Windowed
   title: Alacritty
@@ -34,7 +33,7 @@ font:
     style: Regular
   bold_italic:
     family: Fira Code
-    style: Re
+    style: Regular
   size: 15.0
 
 # Nord theme
