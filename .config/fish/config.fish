@@ -20,7 +20,8 @@ alias swayconf "$EDITOR ~/.config/sway/config"
 alias todo "$EDITOR ~/OneDrive/todo.md"
 alias workouts "$EDITOR ~/OneDrive/workouts.md"
 
-zoxide init fish | source
+# Nix
+fenv source '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
 
 if status is-interactive
 
