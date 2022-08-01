@@ -1,0 +1,36 @@
+{
+    "terminal.integrated.defaultProfile.linux": "fish",
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "editor.minimap.enabled": false,
+    "editor.cursorBlinking": "solid",
+    "editor.fontFamily": "'Fira Code', 'Droid Sans Mono', 'monospace', monospace",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 15,
+    "[markdown]": {
+        "editor.wordWrap": "off",
+        "editor.autoClosingBrackets": "never",
+    },
+    "git.confirmSync": false,
+    "git.autofetch": true,
+    "editor.inlineSuggest.enabled": true,
+    "files.autoSave": "afterDelay",
+    "vim.camelCaseMotion.enable": true,
+    "vim.easymotion": true,
+    "window.zoomLevel": 2,
+    "window.titleBarStyle": "custom",
+    "go.toolsManagement.autoUpdate": true,
+    "explorer.confirmDelete": false,
+    "vim.handleKeys": {
+        "<C-d>": false,
+        "<C-s>": false,
+        "<C-z>": false,
+        "<C-f>": false,
+        "<C-n>": false
+    },
+    "git.enableSmartCommit": true,
+}
