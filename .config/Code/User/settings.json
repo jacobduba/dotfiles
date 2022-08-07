@@ -33,4 +33,5 @@
         "<C-n>": false
     },
     "git.enableSmartCommit": true,
+    "window.commandCenter": true,
 }

@@ -1,5 +1,0 @@
-#!/bin/sh
-
-# Run eclipse under xwayland, because wayland is super bugged.
-export GDK_BACKEND=x11
-/bin/eclipse
