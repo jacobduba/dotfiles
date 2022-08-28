@@ -21,7 +21,6 @@
     "files.autoSave": "afterDelay",
     "vim.camelCaseMotion.enable": true,
     "vim.easymotion": true,
-    "window.zoomLevel": 2,
     "window.titleBarStyle": "custom",
     "go.toolsManagement.autoUpdate": true,
     "explorer.confirmDelete": false,
@@ -34,4 +33,8 @@
     },
     "git.enableSmartCommit": true,
     "window.commandCenter": true,
+    "window.zoomLevel": 2,
+    "cSpell.enableFiletypes": [
+        "markdown"
+    ],
 }

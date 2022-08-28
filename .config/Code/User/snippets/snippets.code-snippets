@@ -1,0 +1,20 @@
+{
+    "Latex: Simple Template": {
+        "prefix": ["template-basic"],
+        "body": [
+			"\\documentclass{article}",
+			"\\usepackage[utf8]{inputenc}",
+			"",
+			"\\title{}",
+			"\\author{}",
+			"\\date{}",
+			"",
+			"\\begin{document}",
+			"",
+			"\\maketitle",
+			"",
+			"\\end{document}",
+        ],
+        "description": "Generates a simple LaTeX template"
+    }
+}

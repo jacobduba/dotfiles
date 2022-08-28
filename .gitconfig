@@ -5,3 +5,4 @@
 	showUntrackedFiles = no
 [core]
 	autocrlf = input
+	editor = nvim
