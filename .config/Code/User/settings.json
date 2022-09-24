@@ -18,8 +18,6 @@
     "git.confirmSync": false,
     "git.autofetch": true,
     "editor.inlineSuggest.enabled": true,
-    "files.autoSave": "afterDelay",
-    "vim.camelCaseMotion.enable": true,
     "vim.easymotion": true,
     "window.titleBarStyle": "custom",
     "go.toolsManagement.autoUpdate": true,
@@ -34,7 +32,15 @@
     "git.enableSmartCommit": true,
     "window.commandCenter": true,
     "window.zoomLevel": 2,
-    "cSpell.enableFiletypes": [
-        "markdown"
-    ],
+    "ltex.enabled": [
+        "bibtex",
+        "context",
+        "context.tex",
+        "html",
+        "latex",
+        // "markdown",
+        "org",
+        "restructuredtext",
+        "rsweave"
+    ]
 }
