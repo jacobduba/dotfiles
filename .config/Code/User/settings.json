@@ -27,7 +27,8 @@
         "<C-s>": false,
         "<C-z>": false,
         "<C-f>": false,
-        "<C-n>": false
+        "<C-n>": false,
+        "<C-b>": false
     },
     "git.enableSmartCommit": true,
     "window.commandCenter": true,
