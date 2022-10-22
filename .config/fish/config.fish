@@ -9,7 +9,7 @@ fish_add_path $HOME/go/bin $HOME/.local/bin
 # Aliases
 alias ll="ls -lh"
 alias fishconf "$EDITOR ~/.config/fish/config.fish"
-alias vimrc "$EDITOR .config/nvim/init.vim"
+alias vimrc "$EDITOR ~/.config/nvim/init.vim"
 
 # Source Allies
 if test -d ~/Documents/sai-aws-auth
