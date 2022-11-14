@@ -19,3 +19,6 @@ if test -d ~/Documents/sai-aws-auth
     alias prod "pushd $cli_dir && fenv source login-aws-prod.sh && popd"
     alias shared "pushd $cli_dir && fenv source login-aws-shared.sh && popd"
 end
+
+# Homebrew
+eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
