@@ -4,7 +4,7 @@ fish_vi_key_bindings
 
 # Enviroment
 set -gx EDITOR nvim
-fish_add_path $HOME/.local/bin
+fish_add_path $HOME/.local/bin $HOME/bench/flutter/bin $HOME/Android/cmdline-tools/latest/bin
 
 # Aliases
 alias ll="ls -lh"
@@ -21,4 +21,4 @@ if test -d ~/Documents/sai-aws-auth
 end
 
 # Homebrew
-eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+# eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
