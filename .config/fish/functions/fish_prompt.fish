@@ -1,3 +1,4 @@
+echo test
 function fish_prompt --description 'Informative prompt'
     #Save the return status of the previous command
     set -l last_pipestatus $pipestatus
