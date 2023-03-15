@@ -1,0 +1,4 @@
+# Because I'm syncing from the home dir, ignore everything
+# Except these folders
+Documents/
+Media/

@@ -7,6 +7,5 @@ set -gx EDITOR nvim
 fish_add_path $HOME/.local/bin $HOME/bench/flutter/bin $HOME/Android/cmdline-tools/latest/bin
 
 # Aliases
-alias ll="ls -lh"
 alias fishconf "$EDITOR ~/.config/fish/config.fish"
 alias vimrc "$EDITOR ~/.config/nvim/init.vim"
