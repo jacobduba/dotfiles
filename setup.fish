@@ -16,3 +16,8 @@ ln -sf (realpath fish/*) ~/.config/fish/
 ln -sf (realpath git/*) ~/.config/git/
 ln -sf (realpath nvim/*) ~/.config/nvim/
 ln -sf (realpath onedrive/*) ~/.config/onedrive/
+
+# Install fisher
+curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source
+fisher install jorgebucaran/fisher jorgebucaran/nvm.fish jorgebucaran/nvm.fish oh-my-fish/plugin-foreign-env
+
