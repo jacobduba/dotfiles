@@ -1,6 +1,6 @@
 call plug#begin()
 
-Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'shaunsingh/nord.nvim'
 Plug 'windwp/nvim-autopairs'
 
