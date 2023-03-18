@@ -1,3 +1,6 @@
+# Git settings that don't change across machines
+# In config, use [include] to include this file
+
 [status]
 	showUntrackedFiles = no
 [core]
