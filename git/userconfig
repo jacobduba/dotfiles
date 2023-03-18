@@ -1,0 +1,7 @@
+[status]
+	showUntrackedFiles = no
+[core]
+	autocrlf = input
+	editor = nvim
+[alias]
+	frbi = "!f() { git rebase -i $(git log --pretty=oneline --color=always | fzf --ansi | cut -d ' ' -f1)^ ; }; f"
