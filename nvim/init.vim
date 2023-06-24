@@ -2,6 +2,7 @@ call plug#begin()
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'shaunsingh/nord.nvim'
+Plug 'folke/tokyonight.nvim'
 Plug 'windwp/nvim-autopairs'
 
 call plug#end()
@@ -35,7 +36,14 @@ syntax enable
 filetype plugin indent on
 let g:nord_contrast = v:true
 let g:nord_borders = v:true
-colorscheme nord
+
+set background=dark
+colorscheme tokyonight-night
+
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 lua<<EOF
 require'nvim-treesitter.configs'.setup {
@@ -45,4 +53,5 @@ require'nvim-treesitter.configs'.setup {
 		additional_vim_regex_highlighting = false,
 	},
 }
+
 EOF

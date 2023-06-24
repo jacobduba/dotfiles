@@ -12,17 +12,17 @@ rm -rf ~/Desktop
 # Create symlinks to the dotfiles in the home directory.
 ln -sf (realpath user-dirs.dirs) ~/.config/
 ln -sf (realpath ssh/*) ~/.ssh/
-ln -sf (realpath fish/*) ~/.config/fish/
-ln -sf (realpath git/*) ~/.config/git/
-ln -sf (realpath nvim/*) ~/.config/nvim/
-ln -sf (realpath onedrive/*) ~/.config/onedrive/
+set symlinks ssh fish git nvim onedrive alacritty
+for symlink in $symlinks
+    mkdir -p ~/.config/$symlink
+    ln -sf (realpath $symlink/*) ~/.config/$symlink/
+end
 
 # Setup fish
 curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source
-fisher install jorgebucaran/fisher jorgebucaran/nvm.fish jorgebucaran/nvm.fish oh-my-fish/plugin-foreign-env
+fisher install jorgebucaran/fisher jorgebucaran/nvm.fish jorgebucaran/nvm.fish oh-my-fish/plugin-foreign-env jethrokuan/fzf
 
 # Setup nvim
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 nvim +PlugInstall +qa
-
